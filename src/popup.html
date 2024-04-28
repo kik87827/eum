@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+    @@include('./include/_head.html')
+    <body>
+        <div class="page_wrap">
+            <main class="middle_wrap" id="contents">
+                <div style="padding:20px;">
+                    <a href="#" class="btn_box size_submit" id="btnCall"><span class="btn_box_text">팝업 호출</span></a>
+                </div>
+            </main>
+    
+            <!-- popup -->
+            <div class="popup_wrap" id="samplePopup">
+                <div class="bg_dim"></div>
+                <div class="popup_box_item">
+                    <div class="popup_box_contents_row">
+                        <h3 class="popup_box_title">국민참여형 복지위기알림서비스</h3>
+                        <div class="popup_box_article">
+                            2023년 11월 1일 00:00 ~ 2023년 11월 15일 12:00 시스템 점검으로 서비스가 일시 중단되오니 이점을 확인하여 이용에 불편이 없으시길 바랍니다. 서비스점검기간동안 복지위기알림서비스의 
+                            복지위기 신고 기능 외에는 모든 기능이 중단됩니다. 다른서비스은 순차적으로 정상화할 예정이오니 
+                            다시 한번 확인바랍니다<br><br>
+
+                            감사합니다
+                        </div>
+                        <div class="popup_box_props_row">
+                            <div class="props_item">
+                                <input type="checkbox" class="props_form" id="today">
+                                <label for="today" class="props_label emp">24시간동안 보지않음</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup_box_btn_row">
+                        <!-- close_trigger 클릭시 팝업 닫기 -->
+                        <a href="#" class="btn_popup_submit primary close_trigger"><span class="btn_popup_submit_text">확인</span></a>
+                    </div>
+                </div>
+            </div>
+            <!-- // popup -->
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    // 인스턴스 선언
+                    let samplePopup = new DesignPopup({
+                        selector: "#samplePopup",
+                        beforeCallback(){
+    
+                        },
+                        callback(){
+    
+                        },
+                        closeCallback(){
+                            document.querySelector("#btnCall").focus(); // 접근성 키보드 이슈로 이벤트 발생 버튼에 포커스
+                        }
+                    });
+    
+                    samplePopup.popupShow(); // show
+                    // samplePopup.popupShow(); // hide
+    
+                    // event
+                    document.querySelector("#btnCall").addEventListener("click",()=>{
+                        samplePopup.popupShow(); // show
+                    });
+                });
+            </script>
+        </div>
+    </body>
+</html>

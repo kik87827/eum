@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<body>
+	<div class="page_wrap">
+		<main class="middle_wrap" id="contents">
+			<div style="padding:20px;">
+				<a href="#" class="btn_box size_submit" id="btnCall"><span class="btn_box_text">팝업 호출</span></a>
+			</div>
+		</main>
+
+		<!-- popup -->
+		<div class="popup_wrap" id="sampleAlertPopup">
+			<div class="bg_dim"></div>
+			<div class="popup_box_item">
+				<div class="popup_box_contents_row">
+					<p class="popup_box_message_para">24시간동안 팝업 공지를 열지 않습니다.</p>
+				</div>
+				<div class="popup_box_btn_row">
+					<!-- close_trigger 클릭시 팝업 닫기 -->
+					<a href="#" class="btn_popup_submit primary close_trigger"><span class="btn_popup_submit_text">확인</span></a>
+				</div>
+			</div>
+		</div>
+		<!-- // popup -->
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+				// 인스턴스 선언
+				let sampleAlertPopup = new DesignPopup({
+					selector: "#sampleAlertPopup",
+					beforeCallback() {
+
+					},
+					callback() {
+
+					},
+					closeCallback() {
+						document.querySelector("#btnCall").focus(); // 접근성 키보드 이슈로 이벤트 발생 버튼에 포커스
+					}
+				});
+
+				sampleAlertPopup.popupShow(); // show
+				// sampleAlertPopup.popupShow(); // hide
+
+				// event
+				document.querySelector("#btnCall").addEventListener("click", () => {
+					sampleAlertPopup.popupShow(); // show
+				});
+			});
+		</script>
+	</div>
+</body>
+
+</html>
