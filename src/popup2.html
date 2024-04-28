@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+    @@include('./include/_head.html')
+    <body>
+        <div class="page_wrap">
+            <main class="middle_wrap" id="contents">
+                <div class="middle_inner">
+                    <div>
+                        <a href="#" class="btn_guide" id="btnCall">팝업 호출</a>
+                    </div>
+                </div>
+            </main>
+    
+            <!-- popup -->
+            <div class="popup_wrap" id="samplePopup">
+                <div class="bg_dim"></div>
+                <div class="popup_container_item">
+                    <div class="popup_box_title_row"><h2 class="popup_box_title"><span class="popup_box_title_text">이용약관 동의</span></h2></div>
+                    <div class="popup_box_liquid_row">
+                        내용이 들어갑니다.<br>
+                        내용이 들어갑니다.<br>
+                        내용이 들어갑니다.<br>
+                        내용이 들어갑니다.<br>
+                        내용이 들어갑니다.<br>
+                        내용이 들어갑니다.<br>
+                        내용이 들어갑니다.<br>
+                        내용이 들어갑니다.<br>
+                        내용이 들어갑니다.<br>
+                        내용이 들어갑니다.<br>
+                        내용이 들어갑니다.<br>
+                        내용이 들어갑니다.<br>
+                        내용이 들어갑니다.<br>
+                        내용이 들어갑니다.<br>
+                        내용이 들어갑니다.<br>
+                        내용이 들어갑니다.
+                    </div>
+                    <!-- <div class="popup_box_btn_row">
+                        <a href="#" class="btn_popup_submit primary close_trigger"><span class="btn_popup_submit_text">확 인</span></a>
+                    </div> -->
+                    <button class="btn_popup_close"><span class="hdtext">팝업 닫기</span></button>
+                </div>
+            </div>
+            <!-- // popup -->
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    // 인스턴스 선언
+                    let samplePopup = new DesignPopup({
+                        selector: "#samplePopup",
+                        beforeCallback(){
+    
+                        },
+                        callback(){
+    
+                        },
+                        closeCallback(){
+                        }
+                    });
+    
+                   
+
+                    // 퍼블확인용
+                    samplePopup.popupShow(); // show
+                    // samplePopup.popupShow(); // hide
+    
+                    // event
+                    document.querySelector("#btnCall").addEventListener("click",()=>{
+                        samplePopup.popupShow(); // show
+                    });
+                });
+            </script>
+        </div>
+    </body>
+</html>

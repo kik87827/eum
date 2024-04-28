@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+    @@include('./include/_head.html')
+    <body>
+        <div class="page_wrap">
+            <main class="middle_wrap" id="contents">
+                <div class="middle_inner">
+                    <div>
+                        <a href="#" class="btn_guide" id="btnCall">팝업 호출</a>
+                    </div>
+                </div>
+            </main>
+    
+            <!-- popup -->
+            <div class="popup_wrap bottom_type" id="bottomPopup">
+                <div class="bg_dim"></div>
+                <div class="popup_bottomsheet_item">
+                    <div class="popup_bottomsheet_content_row">
+                        내용이 들어갑니다.<br>
+                        내용이 들어갑니다.<br>
+                        내용이 들어갑니다.<br>
+                        내용이 들어갑니다.<br>
+                        내용이 들어갑니다.<br>
+                        내용이 들어갑니다.<br>
+                        내용이 들어갑니다.<br>
+                        내용이 들어갑니다.<br>
+                        내용이 들어갑니다.<br>
+                        내용이 들어갑니다.<br>
+                        내용이 들어갑니다.<br>
+                        내용이 들어갑니다.<br>
+                        내용이 들어갑니다.<br>
+                        내용이 들어갑니다.<br>
+                        내용이 들어갑니다.<br>
+                        내용이 들어갑니다.<br>
+                        내용이 들어갑니다.<br>
+                        내용이 들어갑니다.<br>
+                        내용이 들어갑니다.<br>
+                        내용이 들어갑니다.<br>
+                        내용이 들어갑니다.<br>
+                        내용이 들어갑니다.<br>
+                        내용이 들어갑니다.<br>
+                        내용이 들어갑니다.<br>
+                        내용이 들어갑니다.<br>
+                        내용이 들어갑니다.<br>
+                        내용이 들어갑니다.<br>
+                        내용이 들어갑니다.<br>
+                        내용이 들어갑니다.<br>
+                        내용이 들어갑니다.<br>
+                        내용이 들어갑니다.
+                    </div>
+                    <button class="btn_popup_close"><span class="hdtext">팝업 닫기</span></button>
+                </div>
+            </div>
+            <!-- // popup -->
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    // 인스턴스 선언
+                    let bottomPopup = new DesignPopup({
+                        selector: "#bottomPopup",
+                        beforeCallback(){
+    
+                        },
+                        callback(){
+    
+                        },
+                        closeCallback(){
+                        }
+                    });
+    
+                   
+
+                    // 퍼블확인용
+                    bottomPopup.popupShow(); // show
+                    // bottomPopup.popupShow(); // hide
+    
+                    // event
+                    document.querySelector("#btnCall").addEventListener("click",()=>{
+                        bottomPopup.popupShow(); // show
+                    });
+                });
+            </script>
+        </div>
+    </body>
+</html>

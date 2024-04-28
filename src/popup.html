@@ -4,34 +4,51 @@
     <body>
         <div class="page_wrap">
             <main class="middle_wrap" id="contents">
-                <div style="padding:20px;">
-                    <a href="#" class="btn_box size_submit" id="btnCall"><span class="btn_box_text">팝업 호출</span></a>
+                <div class="middle_inner">
+                    <div>
+                        <a href="#" class="btn_guide" id="btnCall">팝업 호출</a>
+                    </div>
                 </div>
             </main>
     
             <!-- popup -->
             <div class="popup_wrap" id="samplePopup">
                 <div class="bg_dim"></div>
-                <div class="popup_box_item">
-                    <div class="popup_box_contents_row">
-                        <h3 class="popup_box_title">국민참여형 복지위기알림서비스</h3>
-                        <div class="popup_box_article">
-                            2023년 11월 1일 00:00 ~ 2023년 11월 15일 12:00 시스템 점검으로 서비스가 일시 중단되오니 이점을 확인하여 이용에 불편이 없으시길 바랍니다. 서비스점검기간동안 복지위기알림서비스의 
-                            복지위기 신고 기능 외에는 모든 기능이 중단됩니다. 다른서비스은 순차적으로 정상화할 예정이오니 
-                            다시 한번 확인바랍니다<br><br>
-
-                            감사합니다
-                        </div>
-                        <div class="popup_box_props_row">
-                            <div class="props_item">
-                                <input type="checkbox" class="props_form" id="today">
-                                <label for="today" class="props_label emp">24시간동안 보지않음</label>
+                <div class="popup_box_tb">
+                    <div class="popup_box_td">
+                        <div class="popup_box_item">
+                            <div class="popup_box_title_row"><h2 class="popup_box_title"><span class="popup_box_title_text">안내</span></h2></div>
+                            <div class="popup_box_content_row">
+                                <p class="popup_box_message">
+                                    로그인이 필요합니다.<br>
+                                    로그인 페이지로 이동합니다.
+                                </p>
                             </div>
+                            <div class="popup_box_btn_row">
+                                <a href="#" class="btn_popup_submit primary close_trigger"><span class="btn_popup_submit_text">확 인</span></a>
+                            </div>
+                            <button class="btn_popup_close"><span class="hdtext">팝업 닫기</span></button>
                         </div>
                     </div>
-                    <div class="popup_box_btn_row">
-                        <!-- close_trigger 클릭시 팝업 닫기 -->
-                        <a href="#" class="btn_popup_submit primary close_trigger"><span class="btn_popup_submit_text">확인</span></a>
+                </div>
+            </div>
+            <div class="popup_wrap" id="samplePopup2">
+                <div class="bg_dim"></div>
+                <div class="popup_box_tb">
+                    <div class="popup_box_td">
+                        <div class="popup_box_item">
+                            <div class="popup_box_title_row"><h2 class="popup_box_title"><span class="popup_box_title_text">안내</span></h2></div>
+                            <div class="popup_box_content_row">
+                                <p class="popup_box_message">
+                                    삭제 하시겠습니까?
+                                </p>
+                            </div>
+                            <div class="popup_box_btn_row">
+                                <a href="#" class="btn_popup_submit primary close_trigger"><span class="btn_popup_submit_text">확 인</span></a>
+                                <a href="#" class="btn_popup_submit type2 close_trigger"><span class="btn_popup_submit_text">취 소</span></a>
+                            </div>
+                            <button class="btn_popup_close"><span class="hdtext">팝업 닫기</span></button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -48,12 +65,31 @@
     
                         },
                         closeCallback(){
-                            document.querySelector("#btnCall").focus(); // 접근성 키보드 이슈로 이벤트 발생 버튼에 포커스
+                        }
+                    });
+                    let samplePopup2 = new DesignPopup({
+                        selector: "#samplePopup2",
+                        beforeCallback(){
+    
+                        },
+                        callback(){
+    
+                        },
+                        closeCallback(){
                         }
                     });
     
-                    samplePopup.popupShow(); // show
-                    // samplePopup.popupShow(); // hide
+                   
+
+                    // 퍼블확인용
+                    let url = window.location.href.split('?')[1];
+                    let url_2 = url !== undefined ? url.split('#')[0] : null;
+                    if(url_2 === "type2"){
+                        samplePopup2.popupShow(); // show
+                    }else{
+                        samplePopup.popupShow(); // show
+                        // samplePopup.popupShow(); // hide
+                    }
     
                     // event
                     document.querySelector("#btnCall").addEventListener("click",()=>{
