@@ -16,7 +16,7 @@ gulp.task('scss', function () {
 	.pipe(sourcemaps.init())
 	.pipe(scss().on('error', scss.logError))
 	.pipe(autoprefixer())
-	//.pipe(sourcemaps.write('.'))
+	.pipe(sourcemaps.write('.'))
 	.pipe(gulp.dest('./dist/assets/css/'))
 });
 

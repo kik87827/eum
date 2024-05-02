@@ -173,3 +173,20 @@
     }
 }
 /* // 공통 popup */
+
+
+/* form element */
+select.form_select{color:#232a35;cursor:pointer;font-size:14px; font-weight:500; border:0;height: 48px;padding: 0 50px 0 17px;border-radius:6px;box-sizing:border-box; width:100%;
+    background: #f6f6f7 url("../images/ico_direct_down.png") no-repeat calc(100% - 20px) 50%/17px auto;line-height:48px;-webkit-appearance:none;-moz-appearance:none;appearance:none;
+    &::-ms-value {background: none; color:#232a35;}
+    &::-ms-expand {display: none;}
+}
+.props_item{display:inline-flex;gap:8px;}
+input.props_form{
+    appearance: none; display:inline-block; width:18px;height:18px; background:url("../images/ico_checkbox2.png") no-repeat 0 0/100% auto; flex:0 0 18px;
+    &:checked{
+        background-position:0 100%;
+        & + .props_label{}
+    }
+}
+.props_label{font-size:14px;color:#232323; font-weight:600; padding-top:1px;}
