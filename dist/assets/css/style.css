@@ -3776,6 +3776,65 @@ li.nodata_li .nodata_para {
 }
 
 /* form */
+.form_gate_message_wrap {
+  margin-bottom: 42px;
+}
+
+.form_gate_message {
+  color: #232323;
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.form_gate_message strong {
+  font-weight: 900;
+}
+
+.emp_mdot {
+  background-color: #c4d700;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  display: inline-block;
+  margin-left: 5px;
+  position: relative;
+  top: 1px;
+}
+
+.inline_grid_list {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.inline_liquid_cols {
+  flex: 1;
+  min-width: 0;
+}
+.inline_fixed_cols {
+  flex: 0;
+  white-space: nowrap;
+}
+
+.btn_action_box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 600;
+  background: #363636;
+  line-height: 1;
+  border-radius: 6px;
+  min-height: 50px;
+  white-space: nowrap;
+  padding: 0 20px;
+  text-align: center;
+}
+.btn_action_box:disabled {
+  background: #e1e1e1;
+  color: #5f5f5f;
+}
+
 .form_list > li {
   margin-bottom: 20px;
 }
@@ -3798,7 +3857,7 @@ input.form_input {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  padding: 0 12px;
+  padding: 0 15px;
   height: 50px;
   border: 0;
   border-radius: 6px;
@@ -3983,6 +4042,9 @@ input.props_motion:checked {
   display: inline-block;
 }
 
+.btn_bottom_static_wrap {
+  margin-top: 55px;
+}
 /* view */
 .view_tb {
   width: 100%;
