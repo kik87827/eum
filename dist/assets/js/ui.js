@@ -1,6 +1,7 @@
 window.addEventListener("DOMContentLoaded", () => {
   commonInit();
   //formFunc();
+  formCommon();
 });
 window.addEventListener("load", () => {
   layoutFunc();
@@ -407,5 +408,61 @@ class ComboSelect {
     }
 
     this.optionScroll();
+  }
+}
+
+
+function formCommon() {
+  const input_comp_wrap = document.querySelectorAll(".input_comp_wrap");
+  if (!!input_comp_wrap) {
+    input_comp_wrap.forEach((item) => {
+      const thisItem = item;
+      const thisItemReset = thisItem.querySelector(".btn_reset");
+      const thisItemInput = thisItem.querySelector(".form_input");
+      initAction(item);
+      thisItemReset.addEventListener("click", () => {
+        thisItemInput.value = "";
+        thisItem.classList.remove("value_has");
+      });
+      item.addEventListener("focus", (e) => {
+        const eventItem = e.currentTarget;
+        action(item);
+      });
+      item.addEventListener("keydown", (e) => {
+        const eventItem = e.currentTarget;
+        eventAction(item);
+      });
+      item.addEventListener("focusout", (e) => {
+        const eventItem = e.currentTarget;
+        outAction(item);
+      });
+    });
+
+    function initAction(item) {
+      const thisItem = item;
+      const thisItemInput = thisItem.querySelector(".form_input");
+
+      if (!!thisItemInput.value) {
+        thisItem.classList.add("value_has");
+      } else {
+        thisItem.classList.remove("value_has");
+      }
+    }
+
+    function eventAction(item) {
+      const thisItem = item;
+      const thisItemInput = thisItem.querySelector(".form_input");
+
+      thisItem.classList.add("value_has");
+    }
+
+    function outAction(item) {
+      const thisItem = item;
+      const thisItemInput = thisItem.querySelector(".form_input");
+
+      if (!thisItemInput.value) {
+        thisItem.classList.remove("value_has");
+      }
+    }
   }
 }
