@@ -4025,6 +4025,12 @@ li.nodata_li .nodata_para {
 .liquid_item_wrap {
   margin-bottom: 40px;
 }
+.liquid_item_wrap.mbtype2 {
+  margin-bottom: 17px;
+}
+.liquid_item_wrap + .cbox_fxwrap_wrap {
+  margin-bottom: 40px;
+}
 
 .liquid_item {
   margin-bottom: 22px;
@@ -4064,18 +4070,6 @@ li.nodata_li .nodata_para {
 .liquid_contents .cbox {
   padding: 0 18px;
 }
-.liquid_contents .cbox.type2 {
-  padding: 0;
-}
-.liquid_contents .cbox.type3 {
-  padding: 15px 15px 0 0;
-}
-.liquid_contents .cbox.type4 {
-  padding: 10px;
-}
-.liquid_contents .cbox.type5 {
-  padding: 15px 10px 15px 0;
-}
 
 .cbox {
   background-color: rgb(255, 255, 255);
@@ -4088,6 +4082,18 @@ li.nodata_li .nodata_para {
 }
 .cbox:last-of-type {
   margin-bottom: 0;
+}
+.cbox.type2 {
+  padding: 0;
+}
+.cbox.type3 {
+  padding: 15px 15px 0 0;
+}
+.cbox.type4 {
+  padding: 10px;
+}
+.cbox.type5 {
+  padding: 15px 10px 15px 0;
 }
 
 .data_grid_list {
@@ -4855,6 +4861,17 @@ input.props_motion:checked {
   height: 15px;
   background: url("../images/ico_input_reset.png") no-repeat 50% 50%/100% auto;
 }
+.btn_control_smbox.down {
+  background-image: url("../images/ico_direct_down.png");
+  width: 17px;
+  height: 17px;
+}
+.btn_control_smbox.up {
+  background-image: url("../images/ico_direct_up.png");
+  width: 17px;
+  height: 17px;
+}
+
 .props_item_list {
   display: flex;
   flex-wrap: wrap;
@@ -4944,7 +4961,7 @@ table.rp_tb td input.form_input {
 .inline_form_wrap {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 6px;
 }
 
 .inline_form_cols {
@@ -4955,10 +4972,11 @@ table.rp_tb td input.form_input {
 .inline_form_cols.else {
   flex: 0;
   text-align: center;
+  min-width: 10px;
 }
 .inline_else_form {
   display: inline-block;
-  font-size: 14px;
+  font-size: 12px;
   color: #5f5f5f;
   line-height: 1;
 }
@@ -4978,6 +4996,9 @@ table.rp_tb td input.form_input {
 .inline_obj_form.elsewid {
   max-width: 80%;
 }
+.inline_obj_form.elsewid2 {
+  max-width: 70%;
+}
 
 .inline_key_cols {
   flex: 1;
@@ -4985,6 +5006,18 @@ table.rp_tb td input.form_input {
 .inline_btn_cols {
   flex: 0;
   white-space: nowrap;
+}
+
+.inline_else_cols {
+  flex: 0;
+  white-space: nowrap;
+}
+
+.inline_else_text {
+  display: inline-block;
+  font-size: 12px;
+  color: #1d1d1d;
+  line-height: 1;
 }
 
 .btn_inline_box {
