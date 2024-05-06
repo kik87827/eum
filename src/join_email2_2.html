@@ -24,9 +24,10 @@
                             <div class="form_item">
                                 <div class="form_item_label_row"><p class="form_item_label">아이디(이메일)</p></div>
                                 <div class="form_item_contents">
-                                    <div class="input_comp_wrap">
+                                    <!-- 완료 상태 value_complete -->
+                                    <div class="input_comp_wrap value_complete">
                                         <input type="text" class="form_input" value="asdfg@naver.com">
-                                        <span class="ing_complete"><span class="hdtext">완료</span></span>
+                                        <span class="ing_complete"><span class="hdtext">리셋</span></span>
                                     </div>
                                     <div class="form_inline_copy_wrap">
                                         <p class="form_guide_copy">이메일을 입력하세요.</p>
@@ -38,9 +39,10 @@
                             <div class="form_item">
                                 <div class="form_item_label_row"><p class="form_item_label">비밀번호</p></div>
                                 <div class="form_item_contents">
-                                    <div class="input_comp_wrap">
-                                        <input type="password" class="form_input" placeholder="비밀번호">
-                                        <span class="ing_complete"><span class="hdtext">완료</span></span>
+                                    <!-- 완료 상태 value_complete -->
+                                    <div class="input_comp_wrap value_complete">
+                                        <input type="password" class="form_input" placeholder="비밀번호" value="123456789">
+                                        <span class="ing_complete"><span class="hdtext">리셋</span></span>
                                     </div>
                                     <div class="form_inline_copy_wrap">
                                         <p class="form_guide_copy">6자 이상의 영문/숫자/특수문자 2가지 이상의 조합이어야 합니다.</p>
@@ -52,9 +54,10 @@
                             <div class="form_item">
                                 <div class="form_item_label_row"><p class="form_item_label">이름</p></div>
                                 <div class="form_item_contents">
-                                    <div class="input_comp_wrap">
-                                        <input type="text" class="form_input" placeholder="이름">
-                                        <span class="ing_complete"><span class="hdtext">완료</span></span>
+                                    <!-- 완료 상태 value_complete -->
+                                    <div class="input_comp_wrap value_complete">
+                                        <input type="text" class="form_input" placeholder="이름" value="홍길동">
+                                        <span class="ing_complete"><span class="hdtext">리셋</span></span>
                                     </div>
                                     <div class="form_inline_copy_wrap">
                                         <p class="form_guide_copy">이름을 정확히 입력하세요.</p>
@@ -66,12 +69,14 @@
                             <div class="form_item">
                                 <div class="form_item_label_row"><p class="form_item_label">휴대폰 번호</p></div>
                                 <div class="form_item_contents">
-                                    <div class="input_comp_wrap">
-                                        <input type="text" class="form_input" placeholder="휴대폰 번호">
-                                        <span class="ing_complete"><span class="hdtext">완료</span></span>
+                                    <!-- 완료 상태 value_complete -->
+                                    <div class="input_comp_wrap value_complete">
+                                        <input type="text" class="form_input" placeholder="휴대폰 번호" value="01012345678">
+                                        <span class="ing_complete"><span class="hdtext">리셋</span></span>
                                     </div>
-                                    <div class="form_inline_copy_wrap">
-                                        <p class="form_guide_copy">휴대폰 번호를 정확하게 입력하세요.</p>
+                                    <!-- 폼 메시지 활성화 active -->
+                                    <div class="form_inline_copy_wrap active">
+                                        <p class="form_guide_copy">입력하신 번호로 인증번호가 발송되었습니다.</p>
                                     </div>
                                 </div>
                             </div>
@@ -351,6 +356,8 @@
                 });
 
 
+
+
                 // 퍼블확인용
                 let url = window.location.href.split('?')[1];
                 let url_2 = url !== undefined ? url.split('#')[0] : null;
@@ -359,6 +366,11 @@
                    $(".input_comp_wrap").addClass("warn").removeClass("value_has");
                 }
             });
+
+            window.addEventListener("load",()=>{
+                // block layout
+                vblockLayout();
+            })
         </script>
         <!-- // 동의 팝업 -->
     </div>

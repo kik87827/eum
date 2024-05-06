@@ -420,10 +420,12 @@ function formCommon() {
       const thisItemReset = thisItem.querySelector(".btn_reset");
       const thisItemInput = thisItem.querySelector(".form_input");
       initAction(item);
-      thisItemReset.addEventListener("click", () => {
-        thisItemInput.value = "";
-        thisItem.classList.remove("value_has");
-      });
+      if (!!thisItemReset) {
+        thisItemReset.addEventListener("click", () => {
+          thisItemInput.value = "";
+          thisItem.classList.remove("value_has");
+        });
+      }
       item.addEventListener("focus", (e) => {
         const eventItem = e.currentTarget;
         action(item);
@@ -464,5 +466,19 @@ function formCommon() {
         thisItem.classList.remove("value_has");
       }
     }
+  }
+}
+
+
+function vblockLayout() {
+  const btn_action_box = document.querySelectorAll(".btn_action_box");
+  if (!!btn_action_box) {
+    let arrayValue = [];
+    btn_action_box.forEach((item) => {
+      arrayValue.push(item.getBoundingClientRect().width);
+    });
+    btn_action_box.forEach((item) => {
+      item.style.width = Math.max.apply(null, arrayValue) + "px";
+    });
   }
 }

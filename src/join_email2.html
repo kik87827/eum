@@ -12,9 +12,148 @@
                 <!--  <div class="header_layer right"></div> -->
             </div>
         </header>
-        <main class="middle_wrap" id="contents">
+        <main class="middle_wrap side_type" id="contents">
             <div class="middle_inner">
-                내용이 들어갑니다.
+                <div class="middle_copy_wrap">
+                    <h2 class="middle_copy_main"><span class="copy_main_text">회원가입</span></h2>
+                    <p class="middle_copy_sub">회원정보를 입력해주세요</p>
+                </div>
+                <div class="form_list_wrap">
+                    <ul class="form_list">
+                        <li>
+                            <div class="form_item">
+                                <div class="form_item_label_row"><p class="form_item_label">아이디(이메일)</p></div>
+                                <div class="form_item_contents">
+                                    <!-- 완료 상태 value_complete -->
+                                    <div class="input_comp_wrap value_complete">
+                                        <input type="text" class="form_input" value="asdfg@naver.com">
+                                        <span class="ing_complete"><span class="hdtext">완료</span></span>
+                                    </div>
+                                    <div class="form_inline_copy_wrap">
+                                        <p class="form_guide_copy">이메일을 입력하세요.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form_item">
+                                <div class="form_item_label_row"><p class="form_item_label">비밀번호</p></div>
+                                <div class="form_item_contents">
+                                    <!-- 완료 상태 value_complete -->
+                                    <div class="input_comp_wrap value_complete">
+                                        <input type="password" class="form_input" placeholder="비밀번호" value="123456789">
+                                        <span class="ing_complete"><span class="hdtext">완료</span></span>
+                                    </div>
+                                    <div class="form_inline_copy_wrap">
+                                        <p class="form_guide_copy">6자 이상의 영문/숫자/특수문자 2가지 이상의 조합이어야 합니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form_item">
+                                <div class="form_item_label_row"><p class="form_item_label">이름</p></div>
+                                <div class="form_item_contents">
+                                    <!-- 완료 상태 value_complete -->
+                                    <div class="input_comp_wrap value_complete">
+                                        <input type="text" class="form_input" placeholder="이름" value="홍길동">
+                                        <span class="ing_complete"><span class="hdtext">완료</span></span>
+                                    </div>
+                                    <div class="form_inline_copy_wrap">
+                                        <p class="form_guide_copy">이름을 정확히 입력하세요.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form_item">
+                                <div class="form_item_label_row"><p class="form_item_label">휴대폰 번호</p></div>
+                                <div class="form_item_contents">
+                                    <div class="form_vertical_block">
+                                        <div class="inline_grid_list">
+											<div class="inline_liquid_cols"><input type="text" class="form_input" value="01012341234"></div>
+											<div class="inline_fixed_cols"><button class="btn_action_box skin2">인증번호 요청</button></div>
+										</div>
+                                    </div>
+                                    <div class="form_vertical_block">
+                                        <div class="inline_grid_list">
+											<div class="inline_liquid_cols">
+                                                <div class="input_comp_wrap">
+                                                    <input type="text" class="form_input" value="*******">
+                                                    <button class="btn_textonly">재전송</button>
+                                                </div>
+                                            </div>
+											<div class="inline_fixed_cols"><button class="btn_action_box">인증하기</button></div>
+										</div>
+                                        <!-- 폼 메시지 활성화 active -->
+                                        <div class="form_inline_copy_wrap active">
+                                            <p class="form_guide_copy">입력하신 번호로 인증번호가 발송되었습니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="terms_props_wrap">
+                    <div class="terms_total_props_row">
+                        <div class="props_item skin2">
+                            <input type="checkbox" class="props_form" id="total_agree">
+                            <label for="total_agree" class="props_label">모두 동의합니다.</label>
+                        </div>
+                    </div>
+                    <div class="terms_detail_list_wrap">
+                        <ul class="terms_detail_list">
+                            <li>
+                                <div class="terms_detail_liquid">
+                                    <div class="props_item skin2">
+                                        <input type="checkbox" class="props_form" id="terms_agree_01">
+                                        <label for="terms_agree_01" class="props_label">이용약관 동의(필수)</label>
+                                    </div>
+                                </div>
+                                <div class="terms_detail_fixed">
+                                    <a href="javascript:;" class="btn_terms_go" id="btn_terms_01"><span class="hdtext">자세히 보기</span></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="terms_detail_liquid">
+                                    <div class="props_item skin2">
+                                        <input type="checkbox" class="props_form" id="terms_agree_02">
+                                        <label for="terms_agree_02" class="props_label">전자금융거래 이용약관 동의(필수)</label>
+                                    </div>
+                                </div>
+                                <div class="terms_detail_fixed">
+                                    <a href="javascript:;" class="btn_terms_go" id="btn_terms_02"><span class="hdtext">자세히 보기</span></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="terms_detail_liquid">
+                                    <div class="props_item skin2">
+                                        <input type="checkbox" class="props_form" id="terms_agree_03">
+                                        <label for="terms_agree_03" class="props_label">개인정보 취급방침 동의(필수)</label>
+                                    </div>
+                                </div>
+                                <div class="terms_detail_fixed">
+                                    <a href="javascript:;" class="btn_terms_go" id="btn_terms_03"><span class="hdtext">자세히 보기</span></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="terms_detail_liquid">
+                                    <div class="props_item skin2">
+                                        <input type="checkbox" class="props_form" id="terms_agree_04">
+                                        <label for="terms_agree_04" class="props_label">개인정보 제공 동의(필수)</label>
+                                    </div>
+                                </div>
+                                <div class="terms_detail_fixed">
+                                    <a href="javascript:;" class="btn_terms_go" id="btn_terms_04"><span class="hdtext">자세히 보기</span></a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="btn_bottom_static_wrap mtype2">
+                    <a href="#" class="btn_bottom_box"><span class="btn_bottom_box_text">동의하고 가입하기</span></a>
+                </div>
             </div>
         </main>
         <!-- <div class="bottom_layer_wrap">
@@ -23,8 +162,8 @@
             </div>
         </div> -->
 
-         <!-- popup -->
-         <div class="popup_wrap" id="termsPopup">
+        <!-- 동의 팝업 -->
+        <div class="popup_wrap" id="terms_popup_01">
             <div class="bg_dim"></div>
             <div class="popup_container_item">
                 <div class="popup_box_title_row"><h2 class="popup_box_title"><span class="popup_box_title_text">이용약관 동의</span></h2></div>
@@ -54,89 +193,113 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="popup_box_btn_row">
-                    <a href="#" class="btn_popup_submit primary close_trigger"><span class="btn_popup_submit_text">확 인</span></a>
-                </div> -->
                 <button class="btn_popup_close"><span class="hdtext">팝업 닫기</span></button>
             </div>
         </div>
-
-        <div class="popup_wrap" id="endPopup">
+        <div class="popup_wrap" id="terms_popup_02">
             <div class="bg_dim"></div>
-            <div class="popup_box_tb">
-                <div class="popup_box_td">
-                    <div class="popup_box_item">
-                        <div class="popup_box_title_row"><h2 class="popup_box_title"><span class="popup_box_title_text">가입 완료</span></h2></div>
-                        <div class="popup_box_content_row">
-                            <p class="popup_box_message">
-                                회원가입이 완료되었습니다.
-                            </p>
-                        </div>
-                        <div class="popup_box_btn_row">
-                            <a href="#" class="btn_popup_submit primary close_trigger"><span class="btn_popup_submit_text">확 인</span></a>
+            <div class="popup_container_item">
+                <div class="popup_box_title_row"><h2 class="popup_box_title"><span class="popup_box_title_text">전자금융거래 이용약관 동의</span></h2></div>
+                <div class="popup_box_liquid_row">
+                    <div class="terms_each_block">
+                        <p class="terms_each_para">전자금융거래 내용이 들어갑니다.</p>
+                        <div class="terms_each_cont">
+                            정책이 들어갑니다 정책이 들어갑니다
+                            정책이 들어갑니다 정책이 들어갑니다
+                            정책이 들어갑니다 정책이 들어갑니다
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="popup_wrap bottom_type" id="endPopup02">
-            <div class="bg_dim"></div>
-            <div class="popup_bottomsheet_item">
-                <div class="popup_bottomsheet_content_row">
-                    <div class="popup_box_title_row"><h2 class="popup_box_title"><span class="popup_box_title_text">주소검색</span></h2></div>
-                    <div class="popup_box_content_row">
-                        <div class="search_form_field">
-                            <div class="search_form_liquid">
-                                <div class="input_comp_wrap">
-                                    <input type="text" class="form_input" placeholder="예) 서울특별시 ㅇㅇ구 ㅇㅇ동">
-                                    <button class="btn_reset"><span class="hdtext">리셋</span></button>
-                                </div>
-                            </div>
-                            <div class="search_form_fixed">
-                                <button class="btn_search_submit"><span class="hdtext">검색</span></button>
-                            </div>
+                    <div class="terms_each_block">
+                        <p class="terms_each_para">전자금융거래 내용이 들어갑니다.</p>
+                        <div class="terms_each_cont">
+                            정책이 들어갑니다 정책이 들어갑니다
+                            정책이 들어갑니다 정책이 들어갑니다
+                            정책이 들어갑니다 정책이 들어갑니다
                         </div>
-                        <div class="result_list_render">
-                            <div class="result_title_row"><p class="result_title">검색결과</p></div>
-                            <div class="result_data_list_wrap">
-                                <ul class="result_data_list">
-                                    <li>
-                                        <a href="#" class="result_data">
-                                            <div class="result_main_para">06905</div>
-                                            <div class="result_summary_para">서울특별시 동작구 동작대로 335-1</div>
-                                            <div class="result_summary_para type2">[지번] 서울특별시 동작구 동작동 316</div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="result_data">
-                                            <div class="result_main_para">06905</div>
-                                            <div class="result_summary_para">서울특별시 동작구 동작대로 335-1</div>
-                                            <div class="result_summary_para type2">[지번] 서울특별시 동작구 동작동 316</div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="result_data">
-                                            <div class="result_main_para">06905</div>
-                                            <div class="result_summary_para">서울특별시 동작구 동작대로 335-1</div>
-                                            <div class="result_summary_para type2">[지번] 서울특별시 동작구 동작동 316</div>
-                                        </a>
-                                    </li>
-                                    <li class="nodata_li"><p class="nodata_para">데이터가 없습니다.</p></li>
-                                </ul>
-                            </div>
+                    </div>
+                    <div class="terms_each_block">
+                        <p class="terms_each_para">전자금융거래 내용이 들어갑니다.</p>
+                        <div class="terms_each_cont">
+                            정책이 들어갑니다 정책이 들어갑니다
+                            정책이 들어갑니다 정책이 들어갑니다
+                            정책이 들어갑니다 정책이 들어갑니다
                         </div>
                     </div>
                 </div>
                 <button class="btn_popup_close"><span class="hdtext">팝업 닫기</span></button>
             </div>
         </div>
-        <!-- // popup -->
+        <div class="popup_wrap" id="terms_popup_03">
+            <div class="bg_dim"></div>
+            <div class="popup_container_item">
+                <div class="popup_box_title_row"><h2 class="popup_box_title"><span class="popup_box_title_text">개인정보 취급방침 동의</span></h2></div>
+                <div class="popup_box_liquid_row">
+                    <div class="terms_each_block">
+                        <p class="terms_each_para">개인정보 취급방침 내용이 들어갑니다.</p>
+                        <div class="terms_each_cont">
+                            정책이 들어갑니다 정책이 들어갑니다
+                            정책이 들어갑니다 정책이 들어갑니다
+                            정책이 들어갑니다 정책이 들어갑니다
+                        </div>
+                    </div>
+                    <div class="terms_each_block">
+                        <p class="terms_each_para">개인정보 취급방침 내용이 들어갑니다.</p>
+                        <div class="terms_each_cont">
+                            정책이 들어갑니다 정책이 들어갑니다
+                            정책이 들어갑니다 정책이 들어갑니다
+                            정책이 들어갑니다 정책이 들어갑니다
+                        </div>
+                    </div>
+                    <div class="terms_each_block">
+                        <p class="terms_each_para">개인정보 취급방침 내용이 들어갑니다.</p>
+                        <div class="terms_each_cont">
+                            정책이 들어갑니다 정책이 들어갑니다
+                            정책이 들어갑니다 정책이 들어갑니다
+                            정책이 들어갑니다 정책이 들어갑니다
+                        </div>
+                    </div>
+                </div>
+                <button class="btn_popup_close"><span class="hdtext">팝업 닫기</span></button>
+            </div>
+        </div>
+        <div class="popup_wrap" id="terms_popup_04">
+            <div class="bg_dim"></div>
+            <div class="popup_container_item">
+                <div class="popup_box_title_row"><h2 class="popup_box_title"><span class="popup_box_title_text">개인정보 제공 동의</span></h2></div>
+                <div class="popup_box_liquid_row">
+                    <div class="terms_each_block">
+                        <p class="terms_each_para">개인정보 제공 내용이 들어갑니다.</p>
+                        <div class="terms_each_cont">
+                            정책이 들어갑니다 정책이 들어갑니다
+                            정책이 들어갑니다 정책이 들어갑니다
+                            정책이 들어갑니다 정책이 들어갑니다
+                        </div>
+                    </div>
+                    <div class="terms_each_block">
+                        <p class="terms_each_para">개인정보 제공 내용이 들어갑니다.</p>
+                        <div class="terms_each_cont">
+                            정책이 들어갑니다 정책이 들어갑니다
+                            정책이 들어갑니다 정책이 들어갑니다
+                            정책이 들어갑니다 정책이 들어갑니다
+                        </div>
+                    </div>
+                    <div class="terms_each_block">
+                        <p class="terms_each_para">개인정보 제공 내용이 들어갑니다.</p>
+                        <div class="terms_each_cont">
+                            정책이 들어갑니다 정책이 들어갑니다
+                            정책이 들어갑니다 정책이 들어갑니다
+                            정책이 들어갑니다 정책이 들어갑니다
+                        </div>
+                    </div>
+                </div>
+                <button class="btn_popup_close"><span class="hdtext">팝업 닫기</span></button>
+            </div>
+        </div>
         <script>
             document.addEventListener("DOMContentLoaded", function() {
                 // 인스턴스 선언
-                let termsPopup = new DesignPopup({
-                    selector: "#termsPopup",
+                let terms_popup_01 = new DesignPopup({
+                    selector: "#terms_popup_01",
                     beforeCallback(){
 
                     },
@@ -146,8 +309,8 @@
                     closeCallback(){
                     }
                 });
-                let endPopup = new DesignPopup({
-                    selector: "#endPopup",
+                let terms_popup_02 = new DesignPopup({
+                    selector: "#terms_popup_02",
                     beforeCallback(){
 
                     },
@@ -157,8 +320,19 @@
                     closeCallback(){
                     }
                 });
-                let endPopup02 = new DesignPopup({
-                    selector: "#endPopup02",
+                let terms_popup_03 = new DesignPopup({
+                    selector: "#terms_popup_03",
+                    beforeCallback(){
+
+                    },
+                    callback(){
+
+                    },
+                    closeCallback(){
+                    }
+                });
+                let terms_popup_04 = new DesignPopup({
+                    selector: "#terms_popup_04",
                     beforeCallback(){
 
                     },
@@ -169,24 +343,50 @@
                     }
                 });
 
-               
+
+                // event
+                document.querySelector("#btn_terms_01").addEventListener("click",()=>{
+                    terms_popup_01.popupShow(); 
+                });
+                document.querySelector("#btn_terms_02").addEventListener("click",()=>{
+                    terms_popup_02.popupShow(); 
+                });
+                document.querySelector("#btn_terms_03").addEventListener("click",()=>{
+                    terms_popup_03.popupShow(); 
+                });
+                document.querySelector("#btn_terms_04").addEventListener("click",()=>{
+                    terms_popup_04.popupShow(); 
+                });
+
+                // 모두 동의
+                const terms_detail_form = document.querySelectorAll(".terms_detail_list .props_form");
+                document.querySelector("#total_agree").addEventListener("click",(e)=>{
+                    const thisEvent = e.currentTarget;
+                    terms_detail_form.forEach((item)=>{
+                        item.checked = thisEvent.checked;
+                    });
+                });
+
+
+
+
                 // 퍼블확인용
                 let url = window.location.href.split('?')[1];
                 let url_2 = url !== undefined ? url.split('#')[0] : null;
-                if (url_2 === "popup") {
-                    termsPopup.popupShow(); // show
-                }else if(url_2 === "end01"){
-                    endPopup.popupShow(); // show
-                }else if(url_2 === "end02"){
-                    endPopup02.popupShow(); // show
+                if(url_2 === "message"){
+                   $(".form_inline_copy_wrap").addClass("active");
+                   $(".input_comp_wrap").addClass("warn").removeClass("value_has");
+                }else if(url_2 === "popup"){
+                    terms_popup_01.popupShow(); 
                 }
-
-                // 퍼블확인용
-                // termsPopup.popupShow(); // show
-                // termsPopup.popupHide(); // hide
-
             });
+
+            window.addEventListener("load",()=>{
+                // block layout
+                vblockLayout();
+            })
         </script>
+        <!-- // 동의 팝업 -->
     </div>
 </body>
 </html>

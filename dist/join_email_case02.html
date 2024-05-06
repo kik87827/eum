@@ -41,13 +41,18 @@
 									<p class="form_item_label">아이디(이메일)</p>
 								</div>
 								<div class="form_item_contents">
-									<!-- 완료 상태 value_complete -->
-									<div class="input_comp_wrap value_complete">
+									<!-- 경고 상태 warn -->
+									<div class="input_comp_wrap warn">
 										<input type="text" class="form_input" value="asdfg@naver.com">
 										<span class="ing_complete"><span class="hdtext">완료</span></span>
 									</div>
-									<div class="form_inline_copy_wrap">
-										<p class="form_guide_copy">이메일을 입력하세요.</p>
+									<!-- 메시지 상태 active -->
+									<div class="form_inline_copy_wrap active">
+										<p class="form_guide_copy">이미 가입된 이메일 주소입니다. 다른 이메일을 입력해주세요.</p>
+									</div>
+									<div class="form_inline_btn_wrap">
+										<a href="#" class="btn_form_inline primary">로그인</a>
+										<a href="#" class="btn_form_inline">비밀번호 찾기</a>
 									</div>
 								</div>
 							</div>
@@ -58,13 +63,14 @@
 									<p class="form_item_label">비밀번호</p>
 								</div>
 								<div class="form_item_contents">
-									<!-- 완료 상태 value_complete -->
-									<div class="input_comp_wrap value_complete">
-										<input type="password" class="form_input" placeholder="비밀번호" value="123456789">
+									<!-- 경고 상태 warn -->
+									<div class="input_comp_wrap warn">
+										<input type="password" class="form_input" placeholder="비밀번호">
 										<span class="ing_complete"><span class="hdtext">완료</span></span>
 									</div>
-									<div class="form_inline_copy_wrap">
-										<p class="form_guide_copy">6자 이상의 영문/숫자/특수문자 2가지 이상의 조합이어야 합니다.</p>
+									<!-- 메시지 상태 active -->
+									<div class="form_inline_copy_wrap active">
+										<p class="form_guide_copy">연속된 문자/숫자는 사용이 불가합니다.</p>
 									</div>
 								</div>
 							</div>
@@ -75,8 +81,7 @@
 									<p class="form_item_label">이름</p>
 								</div>
 								<div class="form_item_contents">
-									<!-- 완료 상태 value_complete -->
-									<div class="input_comp_wrap value_complete">
+									<div class="input_comp_wrap">
 										<input type="text" class="form_input" placeholder="이름" value="홍길동">
 										<span class="ing_complete"><span class="hdtext">완료</span></span>
 									</div>
@@ -92,26 +97,14 @@
 									<p class="form_item_label">휴대폰 번호</p>
 								</div>
 								<div class="form_item_contents">
-									<div class="form_vertical_block">
-										<div class="inline_grid_list">
-											<div class="inline_liquid_cols"><input type="text" class="form_input" value="01012341234"></div>
-											<div class="inline_fixed_cols"><button class="btn_action_box skin2">인증번호 요청</button></div>
-										</div>
+									<!-- 경고 상태 warn -->
+									<div class="input_comp_wrap warn">
+										<input type="text" class="form_input" placeholder="휴대폰 번호">
+										<span class="ing_complete"><span class="hdtext">완료</span></span>
 									</div>
-									<div class="form_vertical_block">
-										<div class="inline_grid_list">
-											<div class="inline_liquid_cols">
-												<div class="input_comp_wrap">
-													<input type="text" class="form_input" value="*******">
-													<button class="btn_textonly">재전송</button>
-												</div>
-											</div>
-											<div class="inline_fixed_cols"><button class="btn_action_box">인증하기</button></div>
-										</div>
-										<!-- 폼 메시지 활성화 active -->
-										<div class="form_inline_copy_wrap active">
-											<p class="form_guide_copy">입력하신 번호로 인증번호가 발송되었습니다.</p>
-										</div>
+									<!-- 메시지 상태 active -->
+									<div class="form_inline_copy_wrap active">
+										<p class="form_guide_copy">asdfg***@naver.com 아이디(이메일)로 가입된 휴대폰 번호 입니다.</p>
 									</div>
 								</div>
 							</div>
@@ -395,23 +388,14 @@
 				});
 
 
-
-
 				// 퍼블확인용
 				let url = window.location.href.split('?')[1];
 				let url_2 = url !== undefined ? url.split('#')[0] : null;
 				if (url_2 === "message") {
 					$(".form_inline_copy_wrap").addClass("active");
 					$(".input_comp_wrap").addClass("warn").removeClass("value_has");
-				} else if (url_2 === "popup") {
-					terms_popup_01.popupShow();
 				}
 			});
-
-			window.addEventListener("load", () => {
-				// block layout
-				vblockLayout();
-			})
 		</script>
 		<!-- // 동의 팝업 -->
 	</div>
