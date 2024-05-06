@@ -592,6 +592,12 @@ input.props_motion{appearance: none;width:42px;height:21px;background:url("../im
 
     }
 }
+.btn_control_smbox{
+    display:block; width:15px;height:15px; background:url("../images/ico_input_reset.png") no-repeat 50% 50%/100% auto;
+    &.ico_delete{
+
+    }
+}
 
 .props_item_list{
     display:flex; flex-wrap:wrap; gap:8px 25px;
@@ -687,3 +693,11 @@ table.rp_tb{
 }
 .indent_bullet{flex:0; white-space: nowrap;}
 .indent_liquid{flex:1;}
+
+.cbox_fxwrap_wrap{}
+.cbox_fxwrap{
+    display:flex; gap:8px; margin-bottom:8px; align-items: center;
+    > .cbox{flex:1;min-width:0;margin-bottom:0;}
+    &:last-of-type{margin-bottom:0;}
+}
+.cbox_fx_cols{flex:0;}

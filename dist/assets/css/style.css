@@ -4849,6 +4849,12 @@ input.props_motion:checked {
   height: 15px;
   background: url("../images/ico_input_reset.png") no-repeat 50% 50%/100% auto;
 }
+.btn_control_smbox {
+  display: block;
+  width: 15px;
+  height: 15px;
+  background: url("../images/ico_input_reset.png") no-repeat 50% 50%/100% auto;
+}
 .props_item_list {
   display: flex;
   flex-wrap: wrap;
@@ -5049,5 +5055,24 @@ table.rp_tb td input.form_input {
 
 .indent_liquid {
   flex: 1;
+}
+
+.cbox_fxwrap {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+  align-items: center;
+}
+.cbox_fxwrap > .cbox {
+  flex: 1;
+  min-width: 0;
+  margin-bottom: 0;
+}
+.cbox_fxwrap:last-of-type {
+  margin-bottom: 0;
+}
+
+.cbox_fx_cols {
+  flex: 0;
 }
 /*# sourceMappingURL=style.css.map */
