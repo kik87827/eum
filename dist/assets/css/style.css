@@ -5108,4 +5108,44 @@ table.rp_tb td input.form_input {
 .cbox_fx_cols {
   flex: 0;
 }
+
+.boxdom_list > li {
+  margin-bottom: 8px;
+}
+.boxdom_list > li:last-of-type {
+  margin-bottom: 0;
+}
+
+.boxdom {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 0px 14.72px 1.28px rgba(158, 158, 158, 0.2);
+  padding: 12px 15px;
+}
+.boxdom .ico {
+  display: block;
+  width: 17px;
+  height: 17px;
+  background: url("../images/ico_direct_link.png") no-repeat 0 0/100% auto;
+}
+.boxdom_text {
+  font-size: 14px;
+  color: #1d1d1d;
+  font-weight: 500;
+}
+
+.boxdom_sub {
+  font-size: 11px;
+  color: #2f59d9;
+  font-weight: 700;
+  background: #eaeefb;
+  border-radius: 4px;
+  display: inline-block;
+  padding: 6px 10px;
+  margin: -5px 0;
+}
 /*# sourceMappingURL=style.css.map */
