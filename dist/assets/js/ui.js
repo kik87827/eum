@@ -105,7 +105,7 @@ function layoutFunc() {
     }
     if (!!bottom_layer_wrap && !!middle_wrap) {
       if (!!btn_topgo) {
-        btn_topgo_height = btn_topgo.getBoundingClientRect().height + 30;
+        btn_topgo_height = btn_topgo.getBoundingClientRect().height + 40;
       }
       middle_wrap.style.paddingBottom = (bottom_layer_wrap.getBoundingClientRect().height + btn_topgo_height) + 'px';
     }

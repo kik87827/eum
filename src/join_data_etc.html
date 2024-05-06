@@ -12,16 +12,90 @@
                 <!--  <div class="header_layer right"></div> -->
             </div>
         </header>
-        <main class="middle_wrap" id="contents">
+        <main class="middle_wrap side_type" id="contents">
             <div class="middle_inner">
-                내용이 들어갑니다.
+                <div class="middle_copy_wrap">
+					<h2 class="middle_copy_main"><span class="copy_main_text">추가정보</span></h2>
+				</div>
+                <div class="profile_wrap">
+                    <div class="profile_item">
+                        <div class="profile_thum"><img src="./assets/images/profile.jpg" alt=""></div>
+                        <p class="proflie_spec">프로필 사진</p>
+                    </div>
+                </div>
+                <div class="form_list_wrap">
+                    <ul class="form_list">
+                        <li>
+                            <div class="form_item">
+                                <div class="form_item_label_row"><p class="form_item_label">우편번호</p></div>
+                                <div class="form_item_contents">
+                                   <div class="inline_grid_list">
+                                        <div class="inline_liquid_cols"><input type="text" class="form_input"></div>
+                                        <div class="inline_fixed_cols"><button class="btn_action_box disabled" disabled>우편번호 검색</button></div>
+                                   </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form_item">
+                                <div class="form_item_label_row"><p class="form_item_label">주소</p></div>
+                                <div class="form_item_contents">
+                                   <ul class="form_block_list">
+                                        <li>
+                                            <input type="text" class="form_input">
+                                        </li>
+                                        <li>
+                                            <input type="text" class="form_input" placeholder="상세주소를 적어주세요">
+                                        </li>
+                                   </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form_item">
+                                <div class="form_item_label_row"><p class="form_item_label">전공분야</p></div>
+                                <div class="form_item_contents">
+                                   <ul class="props_item_list">
+                                        <li>
+                                            <div class="props_item skin2">
+                                                <input type="checkbox" class="props_form" id="kind_01">
+                                                <label for="kind_01" class="props_label">건축, 토목, 기계</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="props_item skin2">
+                                                <input type="checkbox" class="props_form" id="kind_02">
+                                                <label for="kind_02" class="props_label">전기</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="props_item skin2">
+                                                <input type="checkbox" class="props_form" id="kind_03">
+                                                <label for="kind_03" class="props_label">통신</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="props_item skin2">
+                                                <input type="checkbox" class="props_form" id="kind_04">
+                                                <label for="kind_04" class="props_label">소방</label>
+                                            </div>
+                                        </li>
+                                   </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </main>
-        <!-- <div class="bottom_layer_wrap">
+        <div class="bottom_layer_wrap">
             <div class="bottom_layer_inner">
                 <div class="bottom_top_row"><a href="#" class="btn_topgo"><span class="btn_topgo_text">TOP</span></a></div>
             </div>
-        </div> -->
+            <div class="bottom_btn_row">
+                <a href="#" class="btn_bottom_box"><span class="btn_bottom_box_text">확인</span></a>
+            </div>
+        </div>
     </div>
 </body>
 </html>
