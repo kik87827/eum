@@ -249,6 +249,7 @@ li{
         &.type2{padding:0;}
         &.type3{padding:15px 15px 0 0;}
         &.type4{padding:10px;}
+        &.type5{padding:15px 10px 15px 0;}
     }
 }
 .cbox_group{}
@@ -631,6 +632,11 @@ input.props_motion{appearance: none;width:42px;height:21px;background:url("../im
 }
 table.rp_tb{
     width:100%; box-sizing: border-box; 
+    tr{
+        &:last-of-type{
+            th,td{padding-bottom:0;}
+        }
+    }
     th,td{padding-bottom:7px;vertical-align: top;}
     th{width:1px; white-space: nowrap;padding:9px 10px;}
     td{

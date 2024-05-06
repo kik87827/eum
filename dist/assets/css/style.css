@@ -4073,6 +4073,9 @@ li.nodata_li .nodata_para {
 .liquid_contents .cbox.type4 {
   padding: 10px;
 }
+.liquid_contents .cbox.type5 {
+  padding: 15px 10px 15px 0;
+}
 
 .cbox {
   background-color: rgb(255, 255, 255);
@@ -4906,6 +4909,9 @@ input.props_motion:checked {
 table.rp_tb {
   width: 100%;
   box-sizing: border-box;
+}
+table.rp_tb tr:last-of-type th, table.rp_tb tr:last-of-type td {
+  padding-bottom: 0;
 }
 table.rp_tb th, table.rp_tb td {
   padding-bottom: 7px;
