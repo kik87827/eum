@@ -8,11 +8,126 @@
                 <h1 class="header_title"><span class="header_title_text">최고의 전문가가 있습니다.</span></h1>
             </div>
         </header>
-        <main class="middle_wrap skin2" id="contents">
+        <main class="middle_wrap side_type skin2" id="contents">
             <div class="middle_inner">
-                내용이 들어갑니다.
+                <div class="acc_list_wrap">
+                    <ul class="acc_list">
+                        <li>
+                            <div class="acc_box active">
+                                <a href="#" class="acc_bar"><span class="acc_bar_text">내 이력서</span></a>
+                                <div class="acc_contents">
+                                    내용이 들어갑니다.
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="acc_box">
+                                <a href="#" class="acc_bar"><span class="acc_bar_text">등급</span></a>
+                                <div class="acc_contents">
+                                    내용이 들어갑니다.
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="acc_box">
+                                <a href="#" class="acc_bar"><span class="acc_bar_text">국가기술자격</span></a>
+                                <div class="acc_contents">
+                                    내용이 들어갑니다.
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="acc_box">
+                                <a href="#" class="acc_bar"><span class="acc_bar_text">학력</span></a>
+                                <div class="acc_contents">
+                                    내용이 들어갑니다.
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="acc_box">
+                                <a href="#" class="acc_bar"><span class="acc_bar_text">교육훈련</span></a>
+                                <div class="acc_contents">
+                                    내용이 들어갑니다.
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="acc_box">
+                                <a href="#" class="acc_bar"><span class="acc_bar_text">상훈</span></a>
+                                <div class="acc_contents">
+                                    내용이 들어갑니다.
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="acc_box">
+                                <a href="#" class="acc_bar"><span class="acc_bar_text">내 이력서</span></a>
+                                <div class="acc_contents">
+                                    내용이 들어갑니다.
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="acc_box">
+                                <a href="#" class="acc_bar"><span class="acc_bar_text">별점 및 제재사항</span></a>
+                                <div class="acc_contents">
+                                    내용이 들어갑니다.
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="acc_box">
+                                <a href="#" class="acc_bar"><span class="acc_bar_text">기술경력</span></a>
+                                <div class="acc_contents">
+                                    내용이 들어갑니다.
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="acc_box">
+                                <a href="#" class="acc_bar"><span class="acc_bar_text">건설사업관리경력 및 감리경력</span></a>
+                                <div class="acc_contents">
+                                    내용이 들어갑니다.
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="acc_box">
+                                <a href="#" class="acc_bar"><span class="acc_bar_text">배차금지</span></a>
+                                <div class="acc_contents">
+                                    내용이 들어갑니다.
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="line_hr"></div>
+                <div class="docu_wrap">
+                    <div class="docu_title">이력서 제목</div>
+                    <div class="docu_form">
+                        <input type="text" class="form_input emp_skin size3" value="책임감 있게 열심히 하겠습니다.">
+                    </div>
+                    <div class="docu_form_copy">
+                        지원서를 전송하는 행위에는 개인정보를 구인 등록사에 제공함에 동의함을 의미합니다. 동의하십니까
+                    </div>
+                    <div class="docu_props_row">
+                        <div class="props_item skin2">
+                            <input type="checkbox" class="props_form" id="agree_docu">
+                            <label for="agree_docu" class="props_label">동의합니다</label>
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
+        <script>
+            $(function(){
+                $(".acc_bar").on("click",function(e){
+                    e.preventDefault();
+                    $(this).closest(".acc_box").toggleClass("active");
+                });
+            });
+        </script>
         <div class="bottom_layer_wrap">
             <div class="bottom_layer_inner">
                 <div class="bottom_top_row"><a href="#" class="btn_topgo"><span class="btn_topgo_text">TOP</span></a></div>

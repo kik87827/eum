@@ -23,11 +23,38 @@
 				<h1 class="header_title"><span class="header_title_text">최고의 전문가가 있습니다.</span></h1>
 			</div>
 		</header>
-		<main class="middle_wrap skin2" id="contents">
+		<main class="middle_wrap side_type skin2" id="contents">
 			<div class="middle_inner">
-				내용이 들어갑니다.
+				<div class="acc_list_wrap">
+					<ul class="acc_list">
+						<li>
+							<div class="acc_box active">
+								<a href="#" class="acc_bar"><span class="acc_bar_text">내 이력서</span></a>
+								<div class="acc_contents">
+									내용이 들어갑니다.
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="acc_box active">
+								<a href="#" class="acc_bar"><span class="acc_bar_text">등급</span></a>
+								<div class="acc_contents">
+									내용이 들어갑니다.
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</main>
+		<script>
+			$(function() {
+				$(".acc_bar").on("click", function(e) {
+					e.preventDefault();
+					$(this).closest(".acc_box").toggleClass("active");
+				});
+			});
+		</script>
 		<div class="bottom_layer_wrap">
 			<div class="bottom_layer_inner">
 				<div class="bottom_top_row"><a href="#" class="btn_topgo"><span class="btn_topgo_text">TOP</span></a></div>

@@ -182,6 +182,9 @@ select.form_select{color:#232a35;cursor:pointer;font-size:14px; font-weight:500;
     background: #f6f6f7 url("../images/ico_direct_down.png") no-repeat calc(100% - 20px) 50%/17px auto;line-height:48px;-webkit-appearance:none;-moz-appearance:none;appearance:none;
     &::-ms-value {background: none; color:#232a35;}
     &::-ms-expand {display: none;}
+
+    &.skin2{background-color:#fff;border:1px solid #e0e0e0;}
+    &.size2{height:40px;line-height:40px;}
 }
 .props_item{display:inline-flex;gap:8px;
     &.skin2{

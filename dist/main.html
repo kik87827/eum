@@ -18,7 +18,7 @@
 
 <body>
 	<div class="page_wrap">
-		<header class="header_wrap primary">
+		<header class="header_wrap">
 			<div class="header_inner">
 				<div class="header_layer left">
 					<h1 class="header_logo"><a href="#" class="header_logolink"><img src="./assets/images/toplogo.jpg" alt="EUM"></a></h1>
@@ -31,9 +31,42 @@
 				</div>
 			</div>
 		</header>
-		<main class="middle_wrap" id="contents">
+		<main class="middle_wrap main" id="contents">
 			<div class="middle_inner">
-				내용이 들어갑니다.
+				<div class="mv_card_swiper swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<a href="#" class="mv_card"><img src="./assets/images/banner_01.jpg" alt=""></a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#" class="mv_card"><img src="./assets/images/banner_02.jpg" alt=""></a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#" class="mv_card"><img src="./assets/images/banner_03.jpg" alt=""></a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#" class="mv_card"><img src="./assets/images/banner_04.jpg" alt=""></a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#" class="mv_card"><img src="./assets/images/banner_05.jpg" alt=""></a>
+						</div>
+					</div>
+					<div class="swiper-pagination"></div>
+					<div class="swiper_auto_control">
+						<a href="#" class="btn_auto_control play hidden"><span class="hdtext">재생</span></a>
+						<a href="#" class="btn_auto_control stop"><span class="hdtext">정지</span></a>
+					</div>
+				</div>
+				<div class="mv_control_list_wrap">
+					<ul class="mv_control_list">
+						<li>
+							<a href="#" class="mv_control_item">
+								<span class="ico_mv_control"><img src="./assets/images/ico_qr.png" alt=""></span>
+								<span class="spec_mv_control">프로필 자동등록 바로가기</span>
+							</a>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</main>
 		<!-- 바텀 메뉴 -->
@@ -126,12 +159,38 @@
 					closeCallback() {}
 				});
 
+				// 메인비쥬얼 배너
+				let mv_card_swiper = new Swiper(".mv_card_swiper", {
+					pagination: {
+						el: ".mv_card_swiper .swiper-pagination",
+						type: "fraction",
+					},
+					loop: true,
+					autoplay: {
+						delay: 2500,
+						disableOnInteraction: false,
+					},
+				});
+				const auto_play = document.querySelector(".btn_auto_control.play");
+				const auto_stop = document.querySelector(".btn_auto_control.stop");
+				auto_play.addEventListener("click", () => {
+					auto_play.classList.add("hidden");
+					auto_stop.classList.remove("hidden");
+					mv_card_swiper.autoplay.start();
+				});
+				auto_stop.addEventListener("click", () => {
+					auto_stop.classList.add("hidden");
+					auto_play.classList.remove("hidden");
+					mv_card_swiper.autoplay.stop();
+				});
 
 
 				// 퍼블확인용
-				noticePopup.popupShow(); // show
-				// noticePopup.popupHide(); // hide
-
+				let url = window.location.href.split('?')[1];
+				let url_2 = url !== undefined ? url.split('#')[0] : null;
+				if (url_2 === "popup") {
+					noticePopup.popupShow(); // show
+				}
 			});
 		</script>
 	</div>
