@@ -326,6 +326,84 @@
 				<button class="btn_popup_close"><span class="hdtext">팝업 닫기</span></button>
 			</div>
 		</div>
+		<div class="popup_wrap" id="endPopup">
+			<div class="bg_dim"></div>
+			<div class="popup_box_tb">
+				<div class="popup_box_td">
+					<div class="popup_box_item">
+						<div class="popup_box_title_row">
+							<h2 class="popup_box_title"><span class="popup_box_title_text">가입 완료</span></h2>
+						</div>
+						<div class="popup_box_content_row">
+							<p class="popup_box_message">
+								회원가입이 완료되었습니다.
+							</p>
+						</div>
+						<div class="popup_box_btn_row">
+							<a href="#" class="btn_popup_submit primary close_trigger"><span class="btn_popup_submit_text">확 인</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="popup_wrap bottom_type" id="endPopup02">
+			<div class="bg_dim"></div>
+			<div class="popup_bottomsheet_item">
+				<div class="popup_bottomsheet_content_row">
+					<div class="popup_box_title_row">
+						<h2 class="popup_box_title"><span class="popup_box_title_text">주소검색</span></h2>
+					</div>
+					<div class="popup_box_content_row">
+						<div class="search_form_field">
+							<div class="search_form_liquid">
+								<div class="input_comp_wrap">
+									<input type="text" class="form_input" placeholder="예) 서울특별시 ㅇㅇ구 ㅇㅇ동">
+									<button class="btn_reset"><span class="hdtext">리셋</span></button>
+								</div>
+							</div>
+							<div class="search_form_fixed">
+								<button class="btn_search_submit"><span class="hdtext">검색</span></button>
+							</div>
+						</div>
+						<div class="result_list_render">
+							<div class="result_title_row">
+								<p class="result_title">검색결과</p>
+							</div>
+							<div class="result_data_list_wrap">
+								<ul class="result_data_list">
+									<li>
+										<a href="#" class="result_data">
+											<div class="result_main_para">06905</div>
+											<div class="result_summary_para">서울특별시 동작구 동작대로 335-1</div>
+											<div class="result_summary_para type2">[지번] 서울특별시 동작구 동작동 316</div>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="result_data">
+											<div class="result_main_para">06905</div>
+											<div class="result_summary_para">서울특별시 동작구 동작대로 335-1</div>
+											<div class="result_summary_para type2">[지번] 서울특별시 동작구 동작동 316</div>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="result_data">
+											<div class="result_main_para">06905</div>
+											<div class="result_summary_para">서울특별시 동작구 동작대로 335-1</div>
+											<div class="result_summary_para type2">[지번] 서울특별시 동작구 동작동 316</div>
+										</a>
+									</li>
+									<li class="nodata_li">
+										<p class="nodata_para">데이터가 없습니다.</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<button class="btn_popup_close"><span class="hdtext">팝업 닫기</span></button>
+			</div>
+		</div>
 		<script>
 			document.addEventListener("DOMContentLoaded", function() {
 				// 인스턴스 선언
@@ -361,6 +439,26 @@
 				});
 				let terms_popup_04 = new DesignPopup({
 					selector: "#terms_popup_04",
+					beforeCallback() {
+
+					},
+					callback() {
+
+					},
+					closeCallback() {}
+				});
+				let endPopup = new DesignPopup({
+					selector: "#endPopup",
+					beforeCallback() {
+
+					},
+					callback() {
+
+					},
+					closeCallback() {}
+				});
+				let endPopup02 = new DesignPopup({
+					selector: "#endPopup02",
 					beforeCallback() {
 
 					},
@@ -405,6 +503,10 @@
 					$(".input_comp_wrap").addClass("warn").removeClass("value_has");
 				} else if (url_2 === "popup") {
 					terms_popup_01.popupShow();
+				} else if (url_2 === "end01") {
+					endPopup.popupShow(); // show
+				} else if (url_2 === "end02") {
+					endPopup02.popupShow(); // show
 				}
 			});
 
